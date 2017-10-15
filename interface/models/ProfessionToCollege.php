@@ -16,10 +16,19 @@ class ProfessionToCollege extends CI_Model
     }
 
 
-    public function selectData($where=array(),$field='*',$order='',$page=1,$limit=10)
+    public function selectData($where=array(),$field='*',$order='',$page=1,$limit=3007)
     {
         $result = $this->select($where,$field,$order,$page,$limit);
-        var_dump($result);
+        return $result;
     }
+
+
+    public function updateData($data,$field)
+    {
+       $res = $this->update_batch($data,$field);
+       var_dump($res);
+    }
+
+
 
 }

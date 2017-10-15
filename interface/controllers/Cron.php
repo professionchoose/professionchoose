@@ -10,9 +10,8 @@ class Cron extends CI_Controller {
      */
     public function index()
     {
-       $this->load->model('ProfessionToCollege');
-
-       $this->ProfessionToCollege->selectData();
+        $this->load->model('ProfessionToCollege');
+        $this->ProfessionToCollege->selectData();
     }
 
 
